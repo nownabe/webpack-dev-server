@@ -132,7 +132,7 @@ var socketUrl = url.format({
 	protocol: protocol,
 	auth: urlParts.auth,
 	hostname: hostname,
-	port: (urlParts.port === "0") ? self.location.port : urlParts.port,
+	port: self.location.port,
 	pathname: urlParts.path == null || urlParts.path === "/" ? "/sockjs-node" : urlParts.path
 });
 
